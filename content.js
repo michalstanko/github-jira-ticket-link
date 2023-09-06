@@ -10,7 +10,7 @@ function linkifyTickets() {
     const text = titleElem.textContent;
     const updatedText = text.replace(regex, (match) => {
       const ticketPathPart = match.toUpperCase().replace(' ', '-');
-      const style = 'color: #FB9116; background: #022BB8; text-decoration: underline; padding: 2px 14px; border-radius: 8px; color: white;';
+      const style = 'color: #fff; background: #022BB8; text-decoration: underline; padding: 2px 14px; border-radius: 8px;';
       return `<a href="${JIRA_BASE_URL}${ticketPathPart}" target="_blank" style="${style}">${match}</a>`;
     });
 
